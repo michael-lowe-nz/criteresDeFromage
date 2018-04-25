@@ -4,6 +4,7 @@
   "description": "Decipher cheese preference",
   "main": "index.js",
   "scripts": {
+    "start": "webpack --watch --mode=development",
     "test": "node test.js"
   },
   "repository": {
@@ -15,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/michael-lowe-nz/criteresDeFromage/issues"
   },
-  "homepage": "https://github.com/michael-lowe-nz/criteresDeFromage#readme"
+  "homepage": "https://github.com/michael-lowe-nz/criteresDeFromage#readme",
+  "devDependencies": {
+    "webpack": "^4.6.0"
+  }
 }
