@@ -1,0 +1,19 @@
+{
+  "name": "criteresdefromage",
+  "version": "1.0.0",
+  "description": "Decipher cheese preference",
+  "main": "index.js",
+  "scripts": {
+    "test": "node test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/michael-lowe-nz/criteresDeFromage.git"
+  },
+  "author": "Michael Lowe",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/michael-lowe-nz/criteresDeFromage/issues"
+  },
+  "homepage": "https://github.com/michael-lowe-nz/criteresDeFromage#readme"
+}
