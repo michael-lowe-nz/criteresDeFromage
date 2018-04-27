@@ -4,7 +4,7 @@
   "description": "Decipher cheese preference",
   "main": "index.js",
   "scripts": {
-    "start": "webpack --watch --mode=development",
+    "start": "webpack",
     "test": "node test.js"
   },
   "repository": {
@@ -20,6 +20,12 @@
   "devDependencies": {
     "babel-core": "^6.26.0",
     "babel-loader": "^7.1.4",
-    "webpack": "^4.6.0"
+    "copy-webpack-plugin": "^4.5.1",
+    "css-loader": "^0.28.11",
+    "node-sass": "^4.9.0",
+    "sass-loader": "^7.0.1",
+    "style-loader": "^0.21.0",
+    "webpack": "^4.6.0",
+    "webpack-serve": "^0.3.1"
   }
 }
