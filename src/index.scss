@@ -22,4 +22,8 @@ body, html {
   &:hover {
     transform: translateY(-2.8px);
   }
+
+  &:active {
+    transform: scale(0.8);
+  }
 }
