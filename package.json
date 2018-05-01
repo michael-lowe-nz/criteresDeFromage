@@ -4,6 +4,7 @@
   "description": "Decipher cheese preference",
   "main": "index.js",
   "scripts": {
+    "build": "webpack --mode=production",
     "start": "webpack",
     "test": "node test.js"
   },
