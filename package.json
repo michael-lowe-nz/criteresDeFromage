@@ -18,8 +18,10 @@
   },
   "homepage": "https://github.com/michael-lowe-nz/criteresDeFromage#readme",
   "devDependencies": {
+    "@babel/core": "^7.0.0-beta.46",
+    "@babel/preset-env": "^7.0.0-beta.46",
     "babel-core": "^6.26.0",
-    "babel-loader": "^7.1.4",
+    "babel-loader": "^8.0.0-beta.2",
     "copy-webpack-plugin": "^4.5.1",
     "css-loader": "^0.28.11",
     "node-sass": "^4.9.0",

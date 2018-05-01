@@ -8,3 +8,9 @@ body, html {
     background-color: $orange;
     background-image: $bg-gradient;
 }
+
+.main {
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
