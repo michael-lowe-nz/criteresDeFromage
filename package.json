@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "build": "webpack --mode=production",
-    "start": "webpack",
+    "start": "webpack-serve --config ./webpack.config.js --port=3000 --content ./dist",
     "test": "node test.js"
   },
   "repository": {
@@ -21,7 +21,7 @@
   "devDependencies": {
     "@babel/core": "^7.0.0-beta.46",
     "@babel/preset-env": "^7.0.0-beta.46",
-    "babel-core": "^6.26.0",
+    "babel-core": "^6.26.3",
     "babel-loader": "^8.0.0-beta.2",
     "copy-webpack-plugin": "^4.5.1",
     "css-loader": "^0.28.11",
@@ -29,6 +29,6 @@
     "sass-loader": "^7.0.1",
     "style-loader": "^0.21.0",
     "webpack": "^4.6.0",
-    "webpack-serve": "^0.3.1"
+    "webpack-serve": "^0.3.2"
   }
 }
