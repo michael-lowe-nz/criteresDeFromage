@@ -10,7 +10,9 @@ function waitALittle() {
 
 async function main () {
   await waitALittle()
-  console.log('Finito')
+  console.log('Finito Biggito')
 }
 
 main()
+
+[1,2,3].map(num => console.log(num));
