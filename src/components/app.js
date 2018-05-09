@@ -2,11 +2,10 @@ import { h, Component } from 'preact';
 import { Router } from 'preact-router';
 
 import Home from '../routes/home';
-import Profile from '../routes/profile';
+import Questions from '../routes/questions';
 // import Home from 'async!../routes/home';
 // import Profile from 'async!../routes/profile';
 
-// import 'bulma/bulma.sass';
 
 if (module.hot) {
     require('preact/debug');
@@ -26,8 +25,7 @@ export default class App extends Component {
             <div id="app">
                 <Router onChange={this.handleRoute}>
                     <Home path="/" />
-                    <Profile path="/profile/" user="me" />
-                    <Profile path="/profile/:user" />
+                    <Questions path="/questions" />
                 </Router>
             </div>
         );
