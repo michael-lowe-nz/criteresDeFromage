@@ -35,9 +35,9 @@ export default class Questions extends Component {
               answers={["On a pizza", "In a burger", "In a sandwich", "on top of something"]}
             />
           </div>
-          <div class="column is-1">
+          {/* <div class="column is-1">
             <Indicator percentage={30} />
-          </div>
+          </div> */}
         </div>
       </section>
     );
