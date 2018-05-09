@@ -1,0 +1,16 @@
+$orange: #ff9100;
+
+$bg-gradient: linear-gradient(120deg, #f6d365 0%, #fda085 100%);
+
+.button {
+  transition: transform 220ms ease-in-out;
+  // position: relative;
+
+  &:hover {
+    transform: translateY(-2.8px);
+  }
+
+  &:active {
+    transform: translateY(2.8px);
+  }
+}
