@@ -1,34 +1,58 @@
 {
-  "name": "criteresdefromage",
-  "version": "1.0.0",
-  "description": "Decipher cheese preference",
-  "main": "index.js",
+  "private": true,
+  "name": "preact",
+  "version": "0.0.0",
+  "license": "MIT",
   "scripts": {
-    "build": "webpack --mode=production",
-    "start": "webpack-serve --config ./webpack.config.js --port=3000 --content ./dist",
-    "test": "node test.js"
+    "start": "if-env NODE_ENV=production && npm run -s serve || npm run -s dev",
+    "build": "preact build",
+    "serve": "preact build && preact serve",
+    "dev": "preact watch",
+    "lint": "eslint src",
+    "test": "jest ./tests"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/michael-lowe-nz/criteresDeFromage.git"
+  "eslintConfig": {
+    "extends": "eslint-config-synacor"
   },
-  "author": "Michael Lowe",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/michael-lowe-nz/criteresDeFromage/issues"
-  },
-  "homepage": "https://github.com/michael-lowe-nz/criteresDeFromage#readme",
+  "eslintIgnore": [
+    "build/*"
+  ],
   "devDependencies": {
-    "@babel/core": "^7.0.0-beta.46",
-    "@babel/preset-env": "^7.0.0-beta.46",
-    "babel-core": "^6.26.3",
-    "babel-loader": "^8.0.0-beta.2",
-    "copy-webpack-plugin": "^4.5.1",
-    "css-loader": "^0.28.11",
-    "node-sass": "^4.9.0",
-    "sass-loader": "^7.0.1",
-    "style-loader": "^0.21.0",
-    "webpack": "^4.6.0",
-    "webpack-serve": "^0.3.2"
+    "eslint": "^4.9.0",
+    "eslint-config-synacor": "^2.0.2",
+    "identity-obj-proxy": "^3.0.0",
+    "if-env": "^1.0.0",
+    "jest": "^21.2.1",
+    "preact-cli": "^2.1.0",
+    "preact-render-spy": "^1.2.1"
+  },
+  "dependencies": {
+    "preact": "^8.2.6",
+    "preact-compat": "^3.17.0",
+    "preact-router": "^2.5.7"
+  },
+  "jest": {
+    "verbose": true,
+    "setupFiles": [
+      "<rootDir>/src/tests/__mocks__/browserMocks.js"
+    ],
+    "testURL": "http://localhost:8080",
+    "moduleFileExtensions": [
+      "js",
+      "jsx"
+    ],
+    "moduleDirectories": [
+      "node_modules"
+    ],
+    "moduleNameMapper": {
+      "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/src/tests/__mocks__/fileMock.js",
+      "\\.(css|less|scss)$": "identity-obj-proxy",
+      "^./style$": "identity-obj-proxy",
+      "^preact$": "<rootDir>/node_modules/preact/dist/preact.min.js",
+      "^react$": "preact-compat",
+      "^react-dom$": "preact-compat",
+      "^create-react-class$": "preact-compat/lib/create-react-class",
+      "^react-addons-css-transition-group$": "preact-css-transition-group"
+    }
   }
 }
