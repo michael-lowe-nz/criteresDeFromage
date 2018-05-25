@@ -2,6 +2,17 @@ import { h } from 'preact'
 
 const Indicator  = ({rating}) => {
 
+  let customColor
+
+  if (0 <= rating && rating <= 30) {
+    console.log('somn')
+    customColor = 'red'
+  } else if (31 <= rating && rating <= 60) {
+    customColor = 'black'
+  } else {
+    customColor = 'green'
+  }
+
   const containerStyles = {
     fontSize: '60px',
     fontWeight: '600',
@@ -18,8 +29,11 @@ const Indicator  = ({rating}) => {
     width: '150px',
     height: '150px',
     lineHeight: '150px',
-    textAlign: 'center'
+    textAlign: 'center',
+    color: customColor
   }
+
+  console.log('spanStyles.color:', spanStyles.color);
 
   const percentageStyles = {
     ...spanStyles,
