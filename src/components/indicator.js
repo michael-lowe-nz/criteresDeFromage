@@ -5,7 +5,10 @@ const Indicator  = ({rating}) => (
     style={{
       fontSize: '60px',
       fontWeight: '600',
-      padding: '2em'
+      height: '100vh',
+      display: 'flex',
+      justifyContent: 'center',
+      alignItems: 'center'
     }}
   > 
   {rating ?

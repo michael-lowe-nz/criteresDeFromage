@@ -4,12 +4,11 @@ import Guy from '../../components/guy'
 import Indicator from '../../components/indicator'
 
 export default class Questions extends Component {
-  state = { mike: 'helsinki' }
 
   handleAnswer = (question, answer) => {
     this.setState({
       [question]: answer,
-      rating: 50
+      rating: Math.floor(Math.random() * 100)
     })
   }
 
@@ -59,13 +58,23 @@ export default class Questions extends Component {
 
 class Question extends Component {
   render() {
+
+    const buttonGroupStyles = {
+      flexWrap: 'wrap'
+    }
+
+    const buttonStyles = {
+      marginBottom: '6px'
+    }
+
     return (
       <div class="column is-12">
         <label class="label">{this.props.question}</label>
-        <div class="field is-grouped">
+        <div style={buttonGroupStyles} class="field is-grouped">
           {this.props.answers.map(answer => (
             <p class="control">
               <a
+                style={buttonStyles}
                 class={`button is-dark ${this.props.answerState[this.props.question] !== answer && 'is-outlined'}`}
                 onClick={() => this.props.onClick(this.props.question, answer)}>
                 {answer}
