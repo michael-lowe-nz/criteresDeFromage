@@ -13,45 +13,48 @@ export default class Questions extends Component {
   }
 
   render() {
+
+    const halfColumnStyles = {
+      width: '50%',
+      height: '100%'
+    }
+
     return (
-      <section class="section">
-        <div class="container">
-          <div class="columns">
-            <div class="column is-6">
-              <div class="columns is-multiline">
-                <Question
-                  onClick={this.handleAnswer}
-                  question={"What cheese is it?"}
-                  answerState={this.state}
-                  answers={["Parmesan", "Blue Cheese", "Mozarella", "Other"]}
-                />
-                <Question
-                  onClick={this.handleAnswer}
-                  question={"What temperature is the cheese?"}
-                  answerState={this.state}
-                  answers={["Hot", "Cold"]}
-                />
-                <Question
-                  onClick={this.handleAnswer}
-                  question={"What situation is the cheese in?"}
-                  answerState={this.state}
-                  answers={["On a pizza", "In a burger", "In a sandwich", "on top of something"]}
-                />
-              </div>
-            </div>
-            <div class="column is-6">
-              <div style={{
-                display: 'flex',
-                justifyContent: 'center',
-                alignItems: 'center'
-              }}>
-                <Guy />
-                <Indicator rating={this.state.rating}/>
-              </div>
-            </div>
+      <div style={{
+        display: 'flex',
+      }} class="container">
+        <div style={{...halfColumnStyles, padding: '3em 1em'}}>
+          <div class="columns is-multiline">
+            <Question
+              onClick={this.handleAnswer}
+              question={"What cheese is it?"}
+              answerState={this.state}
+              answers={["Parmesan", "Blue Cheese", "Mozarella", "Other"]}
+            />
+            <Question
+              onClick={this.handleAnswer}
+              question={"What temperature is the cheese?"}
+              answerState={this.state}
+              answers={["Hot", "Cold"]}
+            />
+            <Question
+              onClick={this.handleAnswer}
+              question={"What situation is the cheese in?"}
+              answerState={this.state}
+              answers={["On a pizza", "In a burger", "In a sandwich", "on top of something"]}
+            />
           </div>
         </div>
-      </section>
+        <div style={{
+          ...halfColumnStyles,
+          display: 'flex',
+          justifyContent: 'center',
+          alignItems: 'center'
+        }}>
+          <Guy />
+          <Indicator rating={this.state.rating} />
+        </div>
+      </div>
     );
   }
 }
