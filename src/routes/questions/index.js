@@ -48,6 +48,8 @@ export default class Questions extends Component {
         <div style={{
           ...halfColumnStyles,
           display: 'flex',
+          flexDirection: 'column',
+          height: '100vh',
           justifyContent: 'center',
           alignItems: 'center'
         }}>

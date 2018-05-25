@@ -5,6 +5,9 @@ const Guy = () => (
         viewBox='0 0 200 200'
         width='200'
         height='200'
+        style={{
+            minWidth: '130px'
+        }}
     >
         <defs>
             <clipPath id='_clipPath_zgAt5EJ2ZBsGO2Meg5vSZ1ieBC3jNOLX'>
