@@ -5,7 +5,6 @@ const Indicator  = ({rating}) => {
   let customColor
 
   if (0 <= rating && rating <= 30) {
-    console.log('somn')
     customColor = 'red'
   } else if (31 <= rating && rating <= 60) {
     customColor = 'black'
