@@ -8,7 +8,7 @@ export default class Questions extends Component {
   handleAnswer = (question, answer) => {
     this.setState({
       [question]: answer,
-      rating: Math.floor(Math.random() * 100)
+      rating: 50
     })
   }
 

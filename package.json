@@ -9,7 +9,8 @@
     "serve": "preact build && preact serve",
     "dev": "preact watch",
     "lint": "eslint src",
-    "test": "jest ./tests"
+    "test": "jest ./tests",
+    "deploy": "npm run build && gh-pages -d build"
   },
   "eslintConfig": {
     "extends": "eslint-config-synacor"
