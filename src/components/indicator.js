@@ -32,8 +32,6 @@ const Indicator  = ({rating}) => {
     color: customColor
   }
 
-  console.log('spanStyles.color:', spanStyles.color);
-
   const percentageStyles = {
     ...spanStyles,
     fontSize: '20px',

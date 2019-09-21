@@ -2,13 +2,14 @@ import { h, Component } from 'preact'
 import style from './style.scss'
 import Guy from '../../components/guy'
 import Indicator from '../../components/indicator'
+import questionsData from './data'
 
 export default class Questions extends Component {
 
   handleAnswer = (question, answer) => {
     this.setState({
       [question]: answer,
-      rating: 50
+      rating: 50,
     })
   }
 
@@ -25,6 +26,13 @@ export default class Questions extends Component {
       }} class="container">
         <div style={{...halfColumnStyles, padding: '3em 1em'}}>
           <div class="columns is-multiline">
+            {questionsData.map(question =>(
+              <Question
+                onClick={this.handleAnswer}
+                answerState={this.state}
+                question={question.text}
+              />
+            ))}
             <Question
               onClick={this.handleAnswer}
               question={"What cheese is it?"}
@@ -54,7 +62,9 @@ export default class Questions extends Component {
           alignItems: 'center'
         }}>
           <Guy />
-          <Indicator rating={this.state.rating} />
+          <Indicator
+            rating={this.state.rating}
+          />
         </div>
       </div>
     );
@@ -75,7 +85,7 @@ class Question extends Component {
     return (
       <div class="column is-12">
         <label class="label">{this.props.question}</label>
-        <div style={buttonGroupStyles} class="field is-grouped">
+        <div style={buttonGroupStyles} className="field is-grouped">
           {this.props.answers.map(answer => (
             <p class="control">
               <a
