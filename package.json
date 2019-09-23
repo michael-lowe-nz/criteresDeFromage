@@ -1,6 +1,6 @@
 {
   "private": true,
-  "name": "preact",
+  "name": "cheese-michaellowe",
   "version": "0.0.0",
   "license": "MIT",
   "scripts": {
@@ -26,13 +26,13 @@
     "if-env": "^1.0.0",
     "jest": "^21.2.1",
     "node-sass": "^4.9.0",
-    "preact-cli": "^2.1.0",
+    "preact-cli": "^2.2.1",
     "preact-render-spy": "^1.2.1",
     "sass-loader": "^7.0.1"
   },
   "dependencies": {
     "bulma": "^0.7.1",
-    "preact": "^8.2.6",
+    "preact": "^8.5.2",
     "preact-compat": "^3.17.0",
     "preact-router": "^2.5.7"
   },

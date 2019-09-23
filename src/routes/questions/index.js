@@ -31,26 +31,9 @@ export default class Questions extends Component {
                 onClick={this.handleAnswer}
                 answerState={this.state}
                 question={question.text}
+                answers={question.answers}
               />
             ))}
-            <Question
-              onClick={this.handleAnswer}
-              question={"What cheese is it?"}
-              answerState={this.state}
-              answers={["Parmesan", "Blue Cheese", "Mozarella", "Other"]}
-            />
-            <Question
-              onClick={this.handleAnswer}
-              question={"What temperature is the cheese?"}
-              answerState={this.state}
-              answers={["Hot", "Cold"]}
-            />
-            <Question
-              onClick={this.handleAnswer}
-              question={"What situation is the cheese in?"}
-              answerState={this.state}
-              answers={["On a pizza", "In a burger", "In a sandwich", "on top of something"]}
-            />
           </div>
         </div>
         <div style={{
@@ -92,7 +75,7 @@ class Question extends Component {
                 style={buttonStyles}
                 class={`button is-dark ${this.props.answerState[this.props.question] !== answer && 'is-outlined'}`}
                 onClick={() => this.props.onClick(this.props.question, answer)}>
-                {answer}
+                {answer.label}
               </a>
             </p>
           ))}

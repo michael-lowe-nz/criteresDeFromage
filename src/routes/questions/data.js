@@ -29,4 +29,12 @@ export default [
             {label: 'With a cracker',  value: 0.9},
         ]
     },
+    {
+        text: 'How was it cooked?',
+        weight: 0.6,
+        answers: [
+            {label: 'In an enclosed situation',  value: 0.9},
+            {label: 'In an open top grill like situation',  value: 0.9},
+        ]
+    }
 ]
