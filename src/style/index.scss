@@ -3,19 +3,25 @@
 $orange: #ff9100;
 $bg-gradient: linear-gradient(120deg, #f6d365 0%, #fda085 100%);
 
+html {
+  height: 100%;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: $bg-gradient;
+}
+
 body,
-html,
 #app {
-    width: 100%;
-    height: 100%;
-    background-color: $orange;
-    background-image: $bg-gradient;
+  height: 100%;
 }
 
 .main {
-    display: flex;
-    align-items: center;
-    height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .button {
@@ -29,41 +35,4 @@ html,
   &:active {
     transform: translateY(2.8px);
   }
-}
-
-/*
- * react-circular-progressbar styles
- *
- * All of the styles in this file are optional and configurable!
- */
-
- .CircularProgressbar {
-  /*
-   * This fixes an issue where the CircularProgressbar svg has
-   * 0 width inside a "display: flex" container, and thus not visible.
-   *
-   * If you're not using "display: flex", you can remove this style.
-   */
-  width: 100%;
-}
-
-.CircularProgressbar .CircularProgressbar-path {
-  stroke: #3e98c7;
-  stroke-linecap: round;
-  transition: stroke-dashoffset 0.5s ease 0s;
-}
-
-.CircularProgressbar .CircularProgressbar-trail {
-  stroke: #d6d6d6;
-}
-
-.CircularProgressbar .CircularProgressbar-text {
-  fill: #3e98c7;
-  font-size: 20px;
-  dominant-baseline: middle;
-  text-anchor: middle;
-}
-
-.CircularProgressbar .CircularProgressbar-background {
-  fill: #d6d6d6;
 }

@@ -3,9 +3,6 @@ import { Router } from 'preact-router';
 
 import Home from '../routes/home';
 import Questions from '../routes/questions';
-// import Home from 'async!../routes/home';
-// import Profile from 'async!../routes/profile';
-
 
 if (module.hot) {
     require('preact/debug');

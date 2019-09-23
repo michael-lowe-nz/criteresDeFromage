@@ -1,12 +1,20 @@
 import { h, Component } from 'preact';
-import style from'./style.scss';
+import style from './style.scss';
 import { Link } from 'preact-router/match';
 
 export default class Home extends Component {
   render() {
+
+    const styles = {
+      height: '100%',
+      display: 'flex',
+      alignItems: 'center',
+      padding: '3rem 1.5rem'
+    }
+
     return (
-      <section class="section main">
-        <div class="container">
+      <div style={styles} class="home">
+        <div>
           <h1 class="title has-text-white">The Cheese Rules</h1>
           <p class="subtitle has-text-light">a Michael Lowe preference project</p>
           <div class="field is-grouped">
@@ -18,7 +26,7 @@ export default class Home extends Component {
             </p>
           </div>
         </div>
-      </section>
+      </div>
     );
   }
 }
