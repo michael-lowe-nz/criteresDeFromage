@@ -32,8 +32,9 @@
   },
   "dependencies": {
     "bulma": "^0.7.1",
-    "preact": "^10.0.0-rc.3",
-    "preact-router": "^3.0.1"
+    "preact": "^8.5.2",
+    "preact-compat": "^3.17.0",
+    "preact-router": "^2.5.7"
   },
   "jest": {
     "verbose": true,
