@@ -36,5 +36,29 @@ export default [
             {label: 'In an enclosed situation',  value: 0.9},
             {label: 'In an open top grill like situation',  value: 0.9},
         ]
-    }
+    },
+    {
+        text: 'Can the cheese be easily removed?',
+        weight: 0.4,
+        answers: [
+            {label: 'Yes',  value: 0.9},
+            {label: 'No',  value: 0.9},
+        ]
+    },
+    {
+        text: 'Is the cheese in a cheese scone?',
+        weight: 0.4,
+        answers: [
+            {label: 'Yes',  value: 0.9},
+            {label: 'No',  value: 0.9},
+        ]
+    },
+    {
+        text: 'Is the cheese in a cheese scone?',
+        weight: 0.4,
+        answers: [
+            {label: 'Yes',  value: 0.9},
+            {label: 'No',  value: 0.9},
+        ]
+    },
 ]
