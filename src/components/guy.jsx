@@ -1,6 +1,6 @@
 import { h } from 'preact'
 
-const Guy = () => (
+const Guy = ({ isFrowning = false }) => (
     <svg xmlns='http://www.w3.org/2000/svg'
         viewBox='0 0 200 200'
         width='200'
@@ -31,9 +31,24 @@ const Guy = () => (
                 <path d='M 118.509 60.875 C 118.509 56.512 122.544 52.97 127.514 52.97 C 132.485 52.97 136.52 56.512 136.52 60.875 C 136.52 65.238 132.485 68.78 127.514 68.78 C 122.544 68.78 118.509 65.238 118.509 60.875 Z'
                 />
             </g>
-            <line x1='47.863' y1='96.314' x2='156.378' y2='96.314' vectorEffect='non-scaling-stroke'
-                strokeWidth='3' stroke='#000' strokeLinecap='square' strokeMiterlimit='3'
-            />
+            {isFrowning ? (
+                <path d='M 47.863 106.314 Q 102.12 86.314 156.378 106.314' 
+                    vectorEffect='non-scaling-stroke'
+                    strokeWidth='3' 
+                    stroke='#000' 
+                    strokeLinecap='round' 
+                    strokeMiterlimit='3'
+                    fill='none'
+                />
+            ) : (
+                <line x1='47.863' y1='96.314' x2='156.378' y2='96.314' 
+                    vectorEffect='non-scaling-stroke'
+                    strokeWidth='3' 
+                    stroke='#000' 
+                    strokeLinecap='square' 
+                    strokeMiterlimit='3'
+                />
+            )}
         </g>
     </svg>
 )

@@ -9,7 +9,7 @@ export default class Questions extends Component {
     super(props);
     this.state = {
       rating: 50,
-      showAllQuestions: true
+      failedQuestion: null
     };
   }
 
@@ -48,9 +48,14 @@ export default class Questions extends Component {
 
     // Check if this answer has value -1
     if (answer.value === -1) {
-      newState.showAllQuestions = false;
+      newState.failedQuestion = question;
       newState.rating = 0;
     } else {
+      // If we were in a failed state and now selected a good answer, clear the failed state
+      if (this.state.failedQuestion === question) {
+        newState.failedQuestion = null;
+      }
+
       // Recalculate rating
       const tempState = { ...this.state, ...newState };
       newState.rating = this.calculateRating.call({ state: tempState });
@@ -70,10 +75,26 @@ export default class Questions extends Component {
       <div style={{
         display: 'flex',
       }} class="container">
-        <div style={{...halfColumnStyles, padding: '3em 1em'}}>
+        <div style={{ ...halfColumnStyles, padding: '3em 1em' }}>
           <div class="columns is-multiline">
-            {this.state.showAllQuestions ? (
-              questionsData.map(question =>(
+            {this.state.failedQuestion ? (
+              <>
+                <div class="column is-12">
+                  <div class="notification is-danger">
+                    <h3 class="title is-4">Oh no! 😞</h3>
+                    <p>This cheese situation is not acceptable. Change your answer below to continue:</p>
+                  </div>
+                </div>
+                <Question
+                  key={this.state.failedQuestion}
+                  onClick={this.handleAnswer}
+                  answerState={this.state}
+                  question={this.state.failedQuestion}
+                  answers={questionsData.find(q => q.text === this.state.failedQuestion).answers}
+                />
+              </>
+            ) : (
+              questionsData.map(question => (
                 <Question
                   key={question.text}
                   onClick={this.handleAnswer}
@@ -82,13 +103,6 @@ export default class Questions extends Component {
                   answers={question.answers}
                 />
               ))
-            ) : (
-              <div class="column is-12">
-                <div class="notification is-danger">
-                  <h3 class="title is-4">Oh no! 😞</h3>
-                  <p>This cheese situation is not acceptable. Rating: 0%</p>
-                </div>
-              </div>
             )}
           </div>
         </div>
@@ -100,9 +114,9 @@ export default class Questions extends Component {
           justifyContent: 'center',
           alignItems: 'center'
         }}>
-          <Guy />
+          <Guy isFrowning={this.state.rating === 0} />
           <Indicator
-            rating={this.state.rating}
+            rating={this.state.rating || 50}
           />
         </div>
       </div>

@@ -1,64 +1,62 @@
 export default [
     {
         text: 'What cheese is it?',
+        id: "type",
         weight: 0.9,
         answers: [
-            {label: 'Parmesan',  value: -1},
-            {label: 'Blue Cheese',  value: -1},
-            {label: 'Mozarella',  value: 0.9},
-            {label: 'Other',  value: 0.5},
+            { label: 'Parmesan', value: -1 },
+            { label: 'Blue Cheese', value: -1 },
+            { label: 'Mozarella', value: 0.9 },
+            { label: 'Other', value: 0.5 },
         ]
     },
     {
         text: 'What temperature is it?',
+        id: "temperature",
         weight: 0.7,
         answers: [
-            {label: 'Hot',  value: 1},
-            {label: 'Warm',  value: -1},
-            {label: 'Cold',  value: 0.3},
+            { label: 'Hot', value: 1 },
+            { label: 'Warm', value: -1 },
+            { label: 'Cold', value: 0.3 },
         ]
     },
     {
         text: 'What situation is it in?',
+        id: "situation",
         weight: 0.6,
         answers: [
-            {label: 'On a pizza',  value: 0.9},
-            {label: 'In a burger',  value: -1},
-            {label: 'In a toasted sandwich',  value: 0.5},
-            {label: 'On top of something',  value: 0.9},
-            {label: 'With a cracker',  value: 0.9},
+            { label: 'On a pizza', value: 0.9 },
+            { label: 'In a burger', value: -1 },
+            { label: 'In a toasted sandwich', value: 0.5 },
+            { label: 'On top of something', value: 0.9 },
+            { label: 'With a cracker', value: 0.9 },
         ]
     },
     {
         text: 'How was it cooked?',
+        id: "cookedMethod",
         weight: 0.6,
         answers: [
-            {label: 'In an enclosed situation',  value: 0.9},
-            {label: 'In an open top grill like situation',  value: 0.9},
+            { label: 'In an enclosed situation', value: 0.9 },
+            { label: 'In an open top grill like situation', value: 0.9 },
         ]
     },
     {
         text: 'Can the cheese be easily removed?',
+        id: "removal",
         weight: 0.4,
         answers: [
-            {label: 'Yes',  value: 0.9},
-            {label: 'No',  value: 0.9},
+            { label: 'Yes', value: 0.9 },
+            { label: 'No', value: 0.9 },
         ]
     },
     {
         text: 'Is the cheese in a cheese scone?',
+        id: "scone",
         weight: 0.4,
         answers: [
-            {label: 'Yes',  value: 0.9},
-            {label: 'No',  value: 0.9},
-        ]
-    },
-    {
-        text: 'Is the cheese in a cheese scone?',
-        weight: 0.4,
-        answers: [
-            {label: 'Yes',  value: 0.9},
-            {label: 'No',  value: 0.9},
+            { label: 'Yes', value: 0.9 },
+            { label: 'No', value: 0.9 },
         ]
     },
 ]
