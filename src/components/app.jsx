@@ -1,11 +1,11 @@
 import { h, Component } from 'preact';
 import { Router } from 'preact-router';
 
-import Home from '../routes/home';
-import Questions from '../routes/questions';
+import Home from '../routes/home/index.jsx';
+import Questions from '../routes/questions/index.jsx';
 
-if (module.hot) {
-    require('preact/debug');
+if (import.meta.hot) {
+    import('preact/debug');
 }
 
 export default class App extends Component {

@@ -1,0 +1,11 @@
+.button {
+  transition: transform 0.22s ease-in-out, background-color 0.4s ease;
+  
+  &:hover {
+    transform: translateY(-2.8px);
+  }
+  
+  &:active {
+    transform: translateY(2.8px);
+  }
+}

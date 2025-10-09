@@ -13,9 +13,9 @@ export default [
         text: 'What temperature is it?',
         weight: 0.7,
         answers: [
-            {label: 'Hot',  value: 0.9},
+            {label: 'Hot',  value: 1},
             {label: 'Warm',  value: -1},
-            {label: 'Cold',  value: 0.9},
+            {label: 'Cold',  value: 0.3},
         ]
     },
     {
@@ -24,7 +24,7 @@ export default [
         answers: [
             {label: 'On a pizza',  value: 0.9},
             {label: 'In a burger',  value: -1},
-            {label: 'In a toasted sandwich',  value: 0.9},
+            {label: 'In a toasted sandwich',  value: 0.5},
             {label: 'On top of something',  value: 0.9},
             {label: 'With a cracker',  value: 0.9},
         ]

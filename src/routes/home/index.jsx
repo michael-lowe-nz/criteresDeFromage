@@ -1,5 +1,5 @@
 import { h, Component } from 'preact';
-import style from './style.scss';
+import style from './style.module.scss';
 import { Link } from 'preact-router/match';
 
 export default class Home extends Component {
